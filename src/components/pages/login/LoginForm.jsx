@@ -14,6 +14,7 @@ export default function LoginForm() {
     setPrenom("")
 
   }
+
   const handleInputChange = (event) => {
     setPrenom(event.target.value)
   }
@@ -23,7 +24,7 @@ export default function LoginForm() {
       <h1> Bienvenue chez nous !</h1>
       <br />
       <h2> Connectez-vous</h2>
-      <input onChange={handleInputChange} type="text" placeholder='Entrez votre prénom ...' required />
+      <input value={prenom} onChange={handleInputChange} type="text" placeholder="Entrez votre prénom ..." required />
       <button> Accédez à votre espace</button>
     </form>
   )
