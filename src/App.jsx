@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     element: <LoginPage/>,
   },
     {
-    path: '/order',
+    path: '/order/:userName',
     element: <OrderPage/>,
   
   },
