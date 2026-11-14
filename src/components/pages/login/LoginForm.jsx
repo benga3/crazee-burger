@@ -6,20 +6,21 @@ import OrderPage from '../OrderPage'
 export default function LoginForm() {
 
   //state (étatS et donnéeS)
-  const [prenom, setPrenom] = useState("")
-  const routeToOrder = useNavigate()
+  const [userName, setUserName] = useState("")
+  const navigate = useNavigate()
 
 
   //comportementS
   const handleSubmit = (event) => {
     event.preventDefault()
-    alert(`Bonjour ${prenom}`)
-    setPrenom("")
+    //alert(`Bonjour ${userName}`)
+    setUserName("")
+    navigate(`order/${encodeURIComponent(userName)}`)
 
   }
 
   const handleInputChange = (event) => {
-    setPrenom(event.target.value)
+    setUserName(event.target.value)
   }
 
   return (
@@ -27,9 +28,8 @@ export default function LoginForm() {
       <h1> Bienvenue chez nous !</h1>
       <br />
       <h2> Connectez-vous</h2>
-      <input value={prenom} onChange={handleInputChange} type="text" placeholder="Entrez votre prénom ..." required />
-      <button> Accédez à votre espace</button>
-      <button onClick={routeToOrder('/order')}>Order</button>
+      <input value={userName} onChange={handleInputChange} type="text" placeholder="Entrez votre prénom ..." required />
+      <button>Accédez à votre espace</button>
       
     </form>
   )
