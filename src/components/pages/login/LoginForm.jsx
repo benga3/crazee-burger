@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
-import OrderPage from '../OrderPage'
+import OrderPage from '../order/OrderPage'
 
 
 export default function LoginForm() {
