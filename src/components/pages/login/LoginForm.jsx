@@ -24,13 +24,22 @@ export default function LoginForm() {
   }
 
   return (
-    <form action="submit" onSubmit={handleSubmit}>
-      <h1> Bienvenue chez nous !</h1>
-      <br />
-      <h2> Connectez-vous</h2>
-      <input value={userName} onChange={handleInputChange} type="text" placeholder="Entrez votre prénom ..." required />
-      <button>Accédez à votre espace</button>
+    <LoginFormStiled>
+      <form action="submit" onSubmit={handleSubmit}>
+        <h1> Bienvenue chez nous !</h1>
+        <br />
+        <h2> Connectez-vous</h2>
+        <input value={userName} onChange={handleInputChange} type="text" placeholder="Entrez votre prénom ..." required />
+        <button>Accédez à votre espace</button>
       
-    </form>
+      </form>
+    </LoginFormStiled>
   )
 }
+
+import styled from 'styled-components';
+
+const LoginFormStiled = styled.div`
+  background-color: red;
+`;
+
