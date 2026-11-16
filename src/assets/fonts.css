@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Bold';
+  src: url('./fonts/Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url('./fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('./fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
