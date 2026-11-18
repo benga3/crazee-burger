@@ -3,7 +3,7 @@ import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { BsPersonCircle } from "react-icons/bs";
 import styled from 'styled-components';
 import { IoChevronForward } from 'react-icons/io5';
-import InputText from './InputText';
+import InputText from '../../ui/InputText';
 
 
 export default function LoginForm() {

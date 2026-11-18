@@ -25,6 +25,7 @@ const InputTextStyled = styled.div`
     }
 
     input {
+      width: 100%;
       border: none;
       font-size: 15px;
       color: #17171a;
