@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 import { BsPersonCircle } from "react-icons/bs";
 import styled from 'styled-components';
-import { IoChevronForward } from 'react-icons/io5';
 import InputText from '../../ui/InputText';
+import PrimaryButton from '../../ui/PrimaryButton';
+import { IoChevronForward } from 'react-icons/io5';
 
 
 export default function LoginForm() {
@@ -32,18 +33,17 @@ export default function LoginForm() {
         <h1> Bienvenue chez nous !</h1>
         <hr />
         <h2> Connectez-vous</h2>
-        
-        <InputText inputValue={userName} inputChange={handleInputChange} 
-        placeholder="Entrez votre prénom ..." required
-        Icon={<BsPersonCircle className='icon' />} 
+
+        <InputText inputValue={userName} inputChange={handleInputChange}
+          placeholder="Entrez votre prénom ..." required
+          Icon={<BsPersonCircle className='icon' />}
         />
-       
-          <button className='button-with-icon'>
-            Accédez à votre espace
-            <IoChevronForward className='icon'/>
-          </button>
-        
-      
+
+        <PrimaryButton buttonLabel={"Accédez à votre espace"}
+          Icon={<IoChevronForward className='icon' />} />
+
+
+
       </form>
     </LoginFormStiled>
   )
@@ -76,53 +76,6 @@ const LoginFormStiled = styled.div`
     font-size: 36px;
     margin: 20px 10px 10px;
   }
-
-  .button-with-icon {
-    width: 100%;
-    border: 1px solid red;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    with-space: noWrap;
-    text-decoration: none;
-    line-height: 1;
-
-    padding: 18px 24px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 800;
-    color: white;
-    background-color: #ff9f1b;
-    border: 1px solid #ff9f1b;
-
-    &:hover:not(:disabled) {
-      background-color: white;
-      color: #ff9f1b;
-      transition: all 200ms ease-out;
-    }
-
-    &:active {
-      color: white;
-      background-color: #ff9f1b;
-      color: #ff9f1b;
-    }
-
-    &:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    .icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-      margin-left: 10px;
-    }
-
-  }
-
 
 `;
 
