@@ -10,7 +10,6 @@ export default function Logo() {
   )
 }
 const LogoStyled = styled.div`
-  border: 1px solid blue;
   color: white;
   display: flex;
   align-items: center;
