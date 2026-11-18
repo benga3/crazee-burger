@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
-import OrderPage from '../order/OrderPage'
 import { BsPersonCircle } from "react-icons/bs";
+import styled from 'styled-components';
+import { IoChevronForward } from 'react-icons/io5';
 
 
 export default function LoginForm() {
@@ -35,18 +36,23 @@ export default function LoginForm() {
           <input value={userName} onChange={handleInputChange} type="text" placeholder="Entrez votre prénom ..." required />
 
         </div>
-        <button>Accédez à votre espace</button>
+        
+          <button className='button-with-icon'>
+            Accédez à votre espace
+            <IoChevronForward className='icon'/>
+          </button>
+        
       
       </form>
     </LoginFormStiled>
   )
 }
 
-import styled from 'styled-components';
+
 
 const LoginFormStiled = styled.div`
   
-  background-color: red;
+  background-color: green;
   text-aligne: center;
   max-width: 500px;
   min-width: 400px;
@@ -54,6 +60,7 @@ const LoginFormStiled = styled.div`
   padding: 2.5rem 2rem;
   border-radius: 5px;
   font-family: "Amatic SC", cursive;
+  text-transform: uppercase;
 
   hr {
     border: 1px solid #ffa01B;
@@ -94,6 +101,52 @@ const LoginFormStiled = styled.div`
       background: white;
       color: lightgrey;
     }
+  }
+
+  .button-with-icon {
+    width: 100%;
+    border: 1px solid red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    with-space: noWrap;
+    text-decoration: none;
+    line-height: 1;
+
+    padding: 18px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    color: white;
+    background-color: #ff9f1b;
+    border: 1px solid #ff9f1b;
+
+    &:hover:not(:disabled) {
+      background-color: white;
+      color: #ff9f1b;
+      transition: all 200ms ease-out;
+    }
+
+    &:active {
+      color: white;
+      background-color: #ff9f1b;
+      color: #ff9f1b;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      margin-left: 10px;
+    }
+
   }
 
 
